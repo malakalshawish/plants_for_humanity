@@ -42,8 +42,8 @@ class OliveTree extends StatelessWidget{
           ),
           const SizedBox(height: 16.0),
           const Text(
-            'Description of the item goes here. '
-                'Are own design entire former get should. Advantages boisterous day excellence boy. Out between our two waiting wishing. Pursuit he he garrets greater towards amiable so placing. Nothing off how norland delight. Abode shy shade she hours forth its use. Up whole of fancy ye quiet do. Justice fortune no to is if winding morning forming.',
+            'It can be applied topically to soothe and moisturize skin, providing relief for minor wounds, burns, or skin irritations.The antimicrobial properties of oleuropein can be utilized to help disinfect wounds and prevent infection. It may also have anti-inflammatory effects, which can aid in managing injuries','
+            
             style: TextStyle(
               fontSize: 16.0,
             ),
