@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class OliveTree extends StatelessWidget{
-  const OliveTree({super.key});
-
+class Pomegranate extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Olive Tree'),
+        title: const Text('Pomegranate'),
         backgroundColor: const Color(0xFF2E4374),
       ),
       body: Padding(
@@ -25,7 +23,7 @@ class OliveTree extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const Text(
-                        'Olive Tree',
+                        'Pomegranate',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
@@ -47,15 +45,15 @@ class OliveTree extends StatelessWidget{
               alignment: Alignment.centerLeft,
               child: Text(
                 'Uses:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 18.0,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18.0,
                 ),
               ),
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'It can be applied topically to soothe and moisturize skin, providing relief for minor wounds, burns, or skin irritations. The antimicrobial properties of oleuropein can be utilized to help disinfect wounds and prevent infection. It may also have anti-inflammatory effects, which can aid in managing injuries.',
+              'Potentially enhancing resilience and supporting recovery during wartime. Pomegranate juice can serve as a source of hydration and essential nutrients, especially in regions where access to clean water is limited.',
               style: TextStyle(
                 fontSize: 16.0,
               ),
@@ -73,7 +71,7 @@ class OliveTree extends StatelessWidget{
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'Ensure you follow proper safety precautions when working with solvents. Work in a well-ventilated area and use appropriate protective gear.Quality Control: Regularly check the quality of the extraction through analytical techniques.Legality: Check local regulations as extraction processes might be subject to legal restrictions.reducing swelling.Analysis and Storage:Analyze the extracted oleuropein to determine its concentration. Store the final extract in a suitable container, preferably in a cool, dark place.',
+              'Analyze the extracted punicalagins and polyphenols using suitable analytical instruments like HPLC to determine their concentration and purity.Store the final extract in a dark, cool place to maintain stability.Important Considerations:Safety: Follow safety protocols when working with solvents. Work in a well-ventilated area and use appropriate protective gearQuality Control: Regularly check the quality of the extraction through analytical techniques.Legality: Ensure compliance with local regulations, as extraction processes may be subject to legal restrictions.',
               style: TextStyle(
                 fontSize: 16.0,
               ),
@@ -90,5 +88,5 @@ class OliveTree extends StatelessWidget{
       ),
     );
   }
-}
 
+}

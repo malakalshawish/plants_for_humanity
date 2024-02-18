@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class OliveTree extends StatelessWidget{
-  const OliveTree({super.key});
-
+class CitrusFruit extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Olive Tree'),
+        title: const Text('Citrus Fruits'),
         backgroundColor: const Color(0xFF2E4374),
       ),
       body: Padding(
@@ -25,7 +23,7 @@ class OliveTree extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const Text(
-                        'Olive Tree',
+                        'Citrus Fruit',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
@@ -47,15 +45,15 @@ class OliveTree extends StatelessWidget{
               alignment: Alignment.centerLeft,
               child: Text(
                 'Uses:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 18.0,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18.0,
                 ),
               ),
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'It can be applied topically to soothe and moisturize skin, providing relief for minor wounds, burns, or skin irritations. The antimicrobial properties of oleuropein can be utilized to help disinfect wounds and prevent infection. It may also have anti-inflammatory effects, which can aid in managing injuries.',
+              'Reducing the risk of infections and supporting overall health during times of stress and hardship.',
               style: TextStyle(
                 fontSize: 16.0,
               ),
@@ -73,7 +71,7 @@ class OliveTree extends StatelessWidget{
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'Ensure you follow proper safety precautions when working with solvents. Work in a well-ventilated area and use appropriate protective gear.Quality Control: Regularly check the quality of the extraction through analytical techniques.Legality: Check local regulations as extraction processes might be subject to legal restrictions.reducing swelling.Analysis and Storage:Analyze the extracted oleuropein to determine its concentration. Store the final extract in a suitable container, preferably in a cool, dark place.',
+              '---',
               style: TextStyle(
                 fontSize: 16.0,
               ),
@@ -88,7 +86,8 @@ class OliveTree extends StatelessWidget{
           ],
         ),
       ),
+
     );
   }
-}
 
+}
