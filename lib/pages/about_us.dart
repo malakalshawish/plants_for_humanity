@@ -7,7 +7,7 @@ class AboutUs extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: const Text('About Us'),
-        backgroundColor: const Color(0xFF2E4374),
+        backgroundColor: Color.fromARGB(255, 4, 44, 137),
       ),
 
     );

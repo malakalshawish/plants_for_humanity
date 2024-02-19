@@ -76,7 +76,7 @@ class PlantDetails extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'Ensure you follow proper safety precautions when working with solvents. Work in a well-ventilated area and use appropriate protective gear.Quality Control: Regularly check the quality of the extraction through analytical techniques.Legality: Check local regulations as extraction processes might be subject to legal restrictions.reducing swelling.Analysis and Storage:Analyze the extracted oleuropein to determine its concentration. Store the final extract in a suitable container, preferably in a cool, dark place.',
+              'Muscle Disomfort',
               style: TextStyle(
                 fontSize: 16.0,
               ),

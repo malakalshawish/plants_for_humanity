@@ -7,7 +7,7 @@ class WelcomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF2E4374),
+        backgroundColor: Color.fromARGB(255, 4, 175, 81),
         leading: IconButton(onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
         }, icon: const Icon(Icons.house_outlined)),
