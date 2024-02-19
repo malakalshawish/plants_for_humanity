@@ -1,16 +1,19 @@
-import 'package:flutter/material.dart';
 
-class OliveTree extends StatelessWidget{
-  const OliveTree({super.key});
+import 'package:flutter/material.dart';
+import 'package:herbs_for_gaza/model/plant.dart';
+
+class PlantDetails extends StatelessWidget {
+  const PlantDetails({super.key, required this.plant});
+
+  final Plant plant;
+
+  
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Olive Tree'),
-        backgroundColor: const Color(0xFF2E4374),
-      ),
-      body: Padding(
+      body: SingleChildScrollView(child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,8 +27,8 @@ class OliveTree extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Text(
-                        'Olive Tree',
+                       Text(
+                        plant.title,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
@@ -33,7 +36,7 @@ class OliveTree extends StatelessWidget{
                       ),
                       const SizedBox(height: 8.0),
                       Image.network(
-                        'https://via.placeholder.com/150', // Placeholder image URL
+                        plant.imageUrl, // Placeholder image URL
                         fit: BoxFit.cover,
                         height: 150, // Adjust the height as per your need
                       ),
@@ -54,8 +57,8 @@ class OliveTree extends StatelessWidget{
               ),
             ),
             const SizedBox(height: 10.0),
-            const Text(
-              'It can be applied topically to soothe and moisturize skin, providing relief for minor wounds, burns, or skin irritations. The antimicrobial properties of oleuropein can be utilized to help disinfect wounds and prevent infection. It may also have anti-inflammatory effects, which can aid in managing injuries.',
+             Text(
+              plant.uses,
               style: TextStyle(
                 fontSize: 16.0,
               ),
@@ -89,8 +92,7 @@ class OliveTree extends StatelessWidget{
             )
           ],
         ),
-      ),
+      ),),
     );
   }
 }
-

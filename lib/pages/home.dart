@@ -1,32 +1,45 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:herbs_for_gaza/model/category.dart';
+import 'package:herbs_for_gaza/model/plant.dart';
+import 'package:herbs_for_gaza/pages/plants_details.dart';
+
+ List<Plant> plants = [
+Plant(title: "Olive", imageUrl: 'asdada', uses: 'sadadasd', considerations: '', extract: '', ),
+Plant(title: "Citrus", imageUrl: 'asdada', uses: '', considerations: '', extract: '', ),
+Plant(title: "Pomegranate", imageUrl: 'asdada', uses: '', considerations: '', extract: '', ),
+ ];
+
+ List<PlantCategory> categories = [
+  PlantCategory(plants: [plants[0], plants[1]], title: 'Headache')
+    // {
+    //   'name': 'Headache',
+    //   'subcategories': [plants[0], plants[1]]
+    // },
+    // {
+    //   'name': 'Cramps',
+    //   'subcategories': ['Olive Tree', 'Pomegranate']
+    // },
+    // {
+    //   'name': 'Disinfectant',
+    //   'subcategories': ['Olive Tree', 'Citrus Fruits']
+    // },
+    // {
+    //   'name': 'Anti-inflammation',
+    //   'subcategories': ['Olive Tree', 'Bougainvillea']
+    // },
+    // {
+    //   'name': 'Hydration',
+    //   'subcategories': ['Pomegranate']
+    // },
+    // {
+    //   'name': 'Bleeding and Healing',
+    //   'subcategories': ['Bougainvillea']
+    // },
+  ];
 
 class Home extends StatelessWidget {
-  final List<Map<String, dynamic>> categories = [
-    {
-      'name': 'Headache',
-      'subcategories': ['Olive Tree', 'Citrus Fruits', 'Pomegranate']
-    },
-    {
-      'name': 'Cramps',
-      'subcategories': ['Olive Tree', 'Pomegranate']
-    },
-    {
-      'name': 'Disinfectant',
-      'subcategories': ['Olive Tree', 'Citrus Fruits']
-    },
-    {
-      'name': 'Anti-inflammation',
-      'subcategories': ['Olive Tree', 'Bougainvillea']
-    },
-    {
-      'name': 'Hydration',
-      'subcategories': ['Pomegranate']
-    },
-    {
-      'name': 'Bleeding and Healing',
-      'subcategories': ['Bougainvillea']
-    },
-  ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +70,7 @@ class Home extends StatelessWidget {
         itemBuilder: (context, index) {
           return ExpansionTile(
             title: Text(
-              categories[index]['name'],
+              categories[index].title,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -65,7 +78,7 @@ class Home extends StatelessWidget {
               ),
             ),
             children: _buildSubcategoriesList(
-                categories[index]['subcategories'], context),
+                categories[index].plants, context),
           );
         },
       ),
@@ -74,14 +87,14 @@ class Home extends StatelessWidget {
 }
 
 List<Widget> _buildSubcategoriesList(
-    List<String> subcategories, BuildContext context) {
+    List<Plant> subcategories, BuildContext context) {
   return subcategories.map((subcategory) {
     return Card(
       elevation: 3,
       margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: ListTile(
         title: Text(
-          subcategory,
+          subcategory.title,
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
@@ -89,15 +102,16 @@ List<Widget> _buildSubcategoriesList(
           ),
         ),
         onTap: () {
-          if (subcategory == 'Olive Tree') {
-            Navigator.pushNamed(context, '/olive', arguments: subcategory);
-          } else if (subcategory == 'Citrus Fruits') {
-            Navigator.pushNamed(context, '/citrus', arguments: subcategory);
-          } else if (subcategory == 'Pomegranate') {
-            Navigator.pushNamed(context, '/pomegranate', arguments: subcategory);
-          } else if (subcategory == 'Bougainvillea') {
-            Navigator.pushNamed(context, '/bougainvillea', arguments: subcategory);
-          }
+          Navigator.push(context, MaterialPageRoute(builder: (_) => PlantDetails(plant: subcategory,)));
+          // if (subcategory == 'Olive Tree') {
+          //   Navigator.pushNamed(context, '/olive', arguments: subcategory);
+          // } else if (subcategory == 'Citrus Fruits') {
+          //   Navigator.pushNamed(context, '/citrus', arguments: subcategory);
+          // } else if (subcategory == 'Pomegranate') {
+          //   Navigator.pushNamed(context, '/pomegranate', arguments: subcategory);
+          // } else if (subcategory == 'Bougainvillea') {
+          //   Navigator.pushNamed(context, '/bougainvillea', arguments: subcategory);
+          // }
         },
       ),
     );
