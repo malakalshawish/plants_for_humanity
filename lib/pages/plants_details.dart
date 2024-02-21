@@ -1,4 +1,4 @@
-
+import 'package:herbs_for_gaza/pages/extract.dart';
 import 'package:flutter/material.dart';
 import 'package:herbs_for_gaza/model/plant.dart';
 
@@ -85,7 +85,7 @@ class PlantDetails extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(
                 onPressed: (){
-                  
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => ExtractDetails(instructions: plant.extract)));
                 },
                 child: Text('How to Extract'),
               ),
