@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+//import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:herbs_for_gaza/model/category.dart';
 import 'package:herbs_for_gaza/model/plant.dart';
@@ -25,13 +25,13 @@ Plant(title: "Bougainvillea", imageUrl: 'https://upload.wikimedia.org/wikipedia/
   ];
 
 class Home extends StatelessWidget {
-  
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 4, 175, 81),
+        backgroundColor: const Color.fromARGB(255, 4, 175, 81),
         leading: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.house_outlined),
@@ -43,8 +43,8 @@ class Home extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/aboutus');
               },
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Icon(Icons.info_outline),
               ),
             ),
@@ -57,14 +57,14 @@ class Home extends StatelessWidget {
           return ExpansionTile(
             title: Text(
               categories[index].title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 6, 190, 30),
               ),
             ),
-            children: _buildSubcategoriesList(
-                categories[index].plants, context),
+            children:
+                _buildSubcategoriesList(categories[index].plants, context),
           );
         },
       ),
@@ -81,15 +81,19 @@ List<Widget> _buildSubcategoriesList(
       child: ListTile(
         title: Text(
           subcategory.title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 2, 167, 68),
           ),
         ),
         onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => PlantDetails(plant: subcategory,)));
-          
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => PlantDetails(
+                        plant: subcategory,
+                      )));
         },
       ),
     );

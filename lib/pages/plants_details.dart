@@ -1,6 +1,7 @@
 import 'package:herbs_for_gaza/pages/extract.dart';
 import 'package:flutter/material.dart';
 import 'package:herbs_for_gaza/model/plant.dart';
+//import 'package:herbs_for_gaza/pages/extract.dart';
 
 class PlantDetails extends StatelessWidget {
   const PlantDetails({super.key, required this.plant});
@@ -13,7 +14,8 @@ class PlantDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(child: Padding(
+      body: SingleChildScrollView(
+        child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,7 +31,7 @@ class PlantDetails extends StatelessWidget {
                     children: [
                        Text(
                         plant.title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
                         ),
@@ -59,7 +61,7 @@ class PlantDetails extends StatelessWidget {
             const SizedBox(height: 10.0),
              Text(
               plant.uses,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16.0,
               ),
             ),
@@ -75,9 +77,9 @@ class PlantDetails extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10.0),
-            const Text(
-              'Muscle Disomfort',
-              style: TextStyle(
+            Text(
+              plant.considerations,
+              style: const TextStyle(
                 fontSize: 16.0,
               ),
             ),
@@ -87,7 +89,7 @@ class PlantDetails extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (_) => ExtractDetails(instructions: plant.extract)));
                 },
-                child: Text('How to Extract'),
+                child: const Text('How to Extract'),
               ),
             )
           ],
